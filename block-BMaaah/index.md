@@ -3,7 +3,9 @@ writeCode
 Write code to execute below expressions.
 
 1. Create a database named `blog`.
+>> use blog
 2. Create a collection called 'articles'.
+>db.blog.cerateCollection('articles');
 3. Insert multiple documents(at least 3) into articles. It should have fields
 
 - title as string
@@ -19,20 +21,45 @@ Write code to execute below expressions.
 
 ```js
 // An article should look like in the database
-{
-  _id: 'some_random_id',
-  title: '',
-  details: '',
+var articles = [
+  {
+  _id: '4546',
+  title: 'full stack',
+  details: 'its a good book to read and write anything',
   author: {
-    name: '',
-    email: '',
-    age: ''
+    name: 'ravindraputta',
+    email: 'ravindra9900@gmail.com',
+    age: '22'
   },
   tags: ['js', 'mongo']
+},
+{
+  _id: '4547',
+  title: 'developer book',
+  details: 'mern stack developer',
+  author: {
+    name: 'ravindra',
+    email: 'ravindra4849@gmail.com',
+    age: '23'
+  },
+  tags: ['html', 'css','js','react']
+},
+{
+  _id: '4849',
+  title: 'backend developer',
+  details: 'its a backend of web',
+  author: {
+    name: 'venkataravinra pv',
+    email: 'venkataravindrapv@gmail.com',
+    age: '24'
+  },
+  tags: ['js', 'mongo','express','node']
 }
+]
 ```
 
 4. Find all the articles using `db.COLLECTION_NAME.find()`
+>>db.articles.find()
 5. Find a document using \_id field.
 6. 1. Find documents using title
 7. 2. Find documents using author's name field.
